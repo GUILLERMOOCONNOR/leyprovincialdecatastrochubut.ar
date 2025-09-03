@@ -100,6 +100,19 @@
         <p>
             Email: leyprovincialdecatastrochubut@gmail.com<br>
         </p>
+        <div id="visit-counter"></div>
     </footer>
+    <script>
+        // Contador de visitas (local para cada usuario/navegador)
+        const visitKey = 'contador_visitas_chubut';
+        let visitas = localStorage.getItem(visitKey);
+        if (!visitas) {
+            visitas = 1;
+        } else {
+            visitas = parseInt(visitas, 10) + 1;
+        }
+        localStorage.setItem(visitKey, visitas);
+        document.getElementById('visit-counter').textContent = "Contador de visitas (en este navegador): " + visitas;
+    </script>
 </body>
 </html>
