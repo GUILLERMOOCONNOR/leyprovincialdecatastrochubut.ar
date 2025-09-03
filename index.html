@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educar al Soberano</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+            margin: 0 10px;
+            height: fit-content;
+        }
+        .main-content {
+            flex: 1;
+            max-width: 600px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .novedad {
+            margin-bottom: 30px;
+        }
+        .novedad img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .sidebar {
+                width: auto;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,24 +62,40 @@
             <img src="img/youtube-logo.png" alt="Logo de YouTube" style="width:120px;">
         </a>
     </header>
-    <main>
-        <!-- Espacio para contenido adicional -->
-        <section style="text-align:center; margin-top:30px;">
-            <h2>Video destacado de nuestro canal</h2>
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-            <p>
-                <a href="https://www.youtube.com/@Educaralsoberano" target="_blank">
-                    Ver más videos en nuestro canal
-                </a>
-            </p>
-        </section>
-    </main>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Links de Interés</h3>
+            <ul>
+                <li><a href="https://www.argentina.gob.ar/interior/catastro" target="_blank">Dirección Nacional de Catastro</a></li>
+                <li><a href="https://www.chubut.gov.ar/" target="_blank">Gobierno de Chubut</a></li>
+                <li><a href="https://www.youtube.com/@Educaralsoberano" target="_blank">Canal de YouTube</a></li>
+                <!-- Agrega más links aquí -->
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h2>Novedades</h2>
+            <div class="novedad">
+                <h4>Reunión sobre la Ley Provincial</h4>
+                <p>El día 10 de septiembre se realizó una reunión con representantes de municipios para discutir los avances del proyecto.</p>
+                <img src="img/reunion.jpg" alt="Foto de la reunión">
+            </div>
+            <div class="novedad">
+                <h4>Nuevo Documento Disponible</h4>
+                <p>Ya está disponible el borrador actualizado de la ley provincial de catastro. Descárgalo en la sección de documentos.</p>
+                <img src="img/documento.jpg" alt="Documento nuevo">
+            </div>
+            <!-- Puedes agregar más novedades aquí -->
+        </main>
+        <aside class="sidebar">
+            <h3>Links de Interés</h3>
+            <ul>
+                <li><a href="https://www.catastrochubut.gov.ar/" target="_blank">Catastro Chubut</a></li>
+                <li><a href="https://www.argentina.gob.ar/justicia" target="_blank">Ministerio de Justicia</a></li>
+                <li><a href="mailto:leyprovincialdecatastrochubut.ar@gmail.com">Contacto</a></li>
+                <!-- Agrega más links aquí -->
+            </ul>
+        </aside>
+    </div>
     <footer>
         <hr>
         <p>
