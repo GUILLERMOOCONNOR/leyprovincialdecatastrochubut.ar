@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ley de Catastro Chubut 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+            margin: 0 10px;
+            height: fit-content;
+        }
+        .main-content {
+            flex: 1;
+            max-width: 600px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .novedad {
+            margin-bottom: 30px;
+        }
+        .novedad img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .sidebar {
+                width: auto;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto de nueva Ley de Catastro para la Provincia del Chubut</h1>
+        <p>
+            Dada la necesidad de unificar los avances relativos a la adecuación de la Normativa Provincial a la Ley Nacional de Catastro N° 26.209 es que, se ha generado este espacio donde podrá ver las reseñas, los documentos y los avances.
+        </p>
+    </header>
+    <div class="sidebar-column">
+        <aside class="sidebar">
+            <h3>Normativa actual y bibliografía</h3>
+            <ul>
+                <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/120000-124999/124298/norma.htm" target="_blank"> 2007 Ley Nac. Catastro N°26.209</a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1965-Ley-III-4-DGCeIT.pdf" target="_blank"> 1965 Ley Prov. de Catastro (III N°4) </a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1985_Resol_186-85.pdf" target="_blank">1985 Res.186-85 </a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1997_Disposicion-24-97-DCeIT-.pdf" target="_blank">1997 Disp.024-97 </a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2017 XIX Congreso NAcional y V Doro Inernacional de Derecho Registral.pdf" target="_blank">2017 Concenso Derecho de Superficie </a></li>
+            </ul>
+        </aside>
+        <aside class="sidebar">
+            <h3>Documentos complementarios</h3>
+            <ul>
+                <li><a href="URL_DEL_DOCUMENTO" target="_blank">Título del documento</a></li>
+            </ul>
+        </aside>
+    </div>
+        <main class="main-content">
+            <div class="novedad">
+                <p>En marrón las provincias que ya aplican la Ley Nacional de Catastro 26.209 (incluyendo a CABA) o equivalente (Bs.As.) y en azul la Provincia del Chubut.
+                    Es decir, se esta trabajando en la implementacíon de la Ley Nacionl de CAtastro Nº 26.209 que es norma legislativa general de fondo y que actualmnete no se esta aplicando en la Provincia del Chubut.</p>
+                <img src="img/logo3.png" alt="Logo">
+            </div>
+            <div class="novedad">
+                <h4>Actualización del 3 de spetimebre de 2025</h4>
+                <p>Ya está disponible el borrador actualizado del Proyecto de Ley Provincial de Catastro del 3 de septiembre de 2025 para descargarlo y agregar cometarios si entras al drive. <a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">Link al archivo aquí</a></li> </p>
+                <img src="img/AR-U_6.png" alt="Documento nuevo">
+            </div>
+        </main>
+        <aside class="sidebar">
+            <h3>Proyecto de Ley (versiones)</h3>
+            <ul>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">2025 Proyecto del 3 de septiembre de 2025</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <hr>
+        <p>
+            Email: leyprovincialdecatastrochubut@gmail.com<br>
+        </p>
+        <div id="visit-counter"></div>
+    </footer>
+    <script>
+        // Contador de visitas (local para cada usuario/navegador)
+        const visitKey = 'contador_visitas_chubut';
+        let visitas = localStorage.getItem(visitKey);
+        if (!visitas) {
+            visitas = 1;
+        } else {
+            visitas = parseInt(visitas, 10) + 1;
+        }
+        localStorage.setItem(visitKey, visitas);
+        document.getElementById('visit-counter').textContent = "Contador de visitas (en este navegador): " + visitas;
+    </script>
+</body>
+</html>
