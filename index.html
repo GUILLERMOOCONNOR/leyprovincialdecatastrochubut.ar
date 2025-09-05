@@ -8,46 +8,202 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: #f8f9fa;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(90deg, #005c97 0%, #363795 100%);
+            color: #fff;
+            padding: 30px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        header h1 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.1em;
+            margin: 0 auto;
+            max-width: 700px;
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             margin-top: 30px;
+            gap: 20px;
         }
         .sidebar {
-            width: 200px;
-            padding: 20px;
-            background: #f4f4f4;
-            border-radius: 8px;
-            margin: 0 10px;
-            height: fit-content;
+            width: 220px;
+            padding: 22px 18px;
+            background: #e3e7ef;
+            border-radius: 12px;
+            margin: 0 0 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            font-size: 1em;
+        }
+        .sidebar h3 {
+            color: #363795;
+            font-size: 1.1em;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .sidebar ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+        .sidebar ul li a {
+            color: #005c97;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+        .sidebar ul li a:hover {
+            color: #363795;
+            text-decoration: underline;
+        }
+        .right-sidebars {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
         }
         .main-content {
             flex: 1;
-            max-width: 600px;
-            padding: 20px;
+            max-width: 650px;
+            padding: 28px 28px 18px 28px;
             background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            font-size: 1.08em;
+        }
+        .main-content h2 {
+            color: #005c97;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
         }
         .novedad {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
+            border-left: 4px solid #005c97;
+            padding-left: 16px;
+            background: #f3f6fa;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        .novedad h4 {
+            color: #363795;
+            margin-bottom: 6px;
+            margin-top: 10px;
+            font-size: 1.1em;
         }
         .novedad img {
             max-width: 100%;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 10px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.07);
         }
-        @media (max-width: 900px) {
+        /* Formulario de contacto */
+        .contact-form {
+            background: #f3f6fa;
+            border-radius: 10px;
+            padding: 18px 16px 12px 16px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+            margin-top: 18px;
+        }
+        .contact-form h3 {
+            margin-top: 0;
+            color: #005c97;
+            font-size: 1.1em;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 7px 10px;
+            margin-bottom: 12px;
+            border: 1px solid #bfc9d9;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: inherit;
+            background: #fff;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #005c97 0%, #363795 100%);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 22px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #363795 0%, #005c97 100%);
+        }
+        footer {
+            margin-top: 40px;
+            background: #e3e7ef;
+            color: #363795;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            font-size: 1em;
+            border-top: 1px solid #bfc9d9;
+        }
+        #visit-counter {
+            color: #005c97;
+            font-size: 0.98em;
+            margin-top: 8px;
+        }
+        @media (max-width: 1100px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+            .sidebar, .main-content {
+                max-width: 100%;
+                margin: 0 auto 18px auto;
+            }
+            .right-sidebars {
+                flex-direction: row;
+                gap: 12px;
+            }
+            .right-sidebars .sidebar {
+                flex: 1;
+            }
+        }
+        @media (max-width: 700px) {
             .container {
                 flex-direction: column;
                 align-items: stretch;
             }
-            .sidebar {
-                width: auto;
-                margin-bottom: 20px;
+            .sidebar, .main-content {
+                width: 98%;
+                max-width: 100%;
+                margin: 0 auto 18px auto;
+            }
+            .right-sidebars {
+                flex-direction: column;
+                gap: 14px;
             }
         }
     </style>
@@ -63,31 +219,54 @@
         <aside class="sidebar">
             <h3>Normativa actual y bibliografía</h3>
             <ul>
-                <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/120000-124999/124298/norma.htm" target="_blank"> 2007 Ley Nac. Catastro N°26.209</a></li>
-                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1965-Ley-III-4-DGCeIT.pdf" target="_blank"> 1965 Ley Prov. de Catastro (III N°4) </a></li>
-                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1985_Resol_186-85.pdf" target="_blank">1985 Res.186-85 </a></li>
-                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1997_Disposicion-24-97-DCeIT-.pdf" target="_blank">1997 Disp.024-97 </a></li>
-                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2017 XIX Congreso NAcional y V Doro Inernacional de Derecho Registral.pdf" target="_blank">2017 Concenso Derecho de Superficie </a></li>
+                <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/120000-124999/124298/norma.htm" target="_blank">2007 Ley Nac. Catastro N°26.209</a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1965-Ley-III-4-DGCeIT.pdf" target="_blank">1965 Ley Prov. de Catastro (III N°4)</a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1985_Resol_186-85.pdf" target="_blank">1985 Res.186-85</a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/1997_Disposicion-24-97-DCeIT-.pdf" target="_blank">1997 Disp.024-97</a></li>
+                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2017 XIX Congreso NAcional y V Doro Inernacional de Derecho Registral.pdf" target="_blank">2017 Concenso Derecho de Superficie</a></li>
             </ul>
         </aside>
         <main class="main-content">
+            <h2>Novedades</h2>
             <div class="novedad">
                 <p>En marrón las provincias que ya aplican la Ley Nacional de Catastro 26.209 (incluyendo a CABA) o equivalente (Bs.As.) y en azul la Provincia del Chubut.
-                    Es decir, se esta trabajando en la implementacíon de la Ley Nacionl de CAtastro Nº 26.209 que es norma legislativa general de fondo y que actualmnete no se esta aplicando en la Provincia del Chubut.</p>
+                    Es decir, se está trabajando en la implementación de la Ley Nacional de Catastro Nº 26.209 que es norma legislativa general de fondo y que actualmente no se está aplicando en la Provincia del Chubut.</p>
                 <img src="img/logo3.png" alt="Logo">
             </div>
             <div class="novedad">
-                <h4>Actualización del 3 de spetimebre de 2025</h4>
-                <p>Ya está disponible el borrador actualizado del Proyecto de Ley Provincial de Catastro del 3 de septiembre de 2025 para descargarlo y agregar cometarios si entras al drive. <a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">Link al archivo aquí</a></li> </p>
+                <h4>Actualización del 3 de septiembre de 2025</h4>
+                <p>Ya está disponible el borrador actualizado del Proyecto de Ley Provincial de Catastro del 3 de septiembre de 2025 para descargarlo y agregar comentarios si entras al drive. <a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">Link al archivo aquí</a></p>
                 <img src="img/AR-U_6.png" alt="Documento nuevo">
             </div>
+            <div class="contact-form">
+                <h3>Contacto</h3>
+                <form id="form-contacto" action="mailto:leyprovincialdecatastrochubut@gmail.com" method="POST" enctype="text/plain">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </main>
-        <aside class="sidebar">
-            <h3>Proyecto de Ley (versiones)</h3>
-            <ul>
-                <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">2025 Proyecto del 3 de septiembre de 2025</a></li>
-            </ul>
-        </aside>
+        <div class="right-sidebars">
+            <aside class="sidebar">
+                <h3>Proyecto de Ley (versiones)</h3>
+                <ul>
+                    <li><a href="https://github.com/GUILLERMOOCONNOR/leyprovincialdecatastrochubut.ar/blob/main/2025-09-03_Para_Comentar.pdf" target="_blank">2025 Proyecto del 3 de septiembre de 2025</a></li>
+                </ul>
+            </aside>
+            <aside class="sidebar">
+                <h3>Links de interés</h3>
+                <ul>
+                    <li><a href="https://www.argentina.gob.ar/interior/catastro" target="_blank">Dirección Nacional de Catastro</a></li>
+                    <li><a href="https://www.chubut.gov.ar/" target="_blank">Gobierno de Chubut</a></li>
+                    <li><a href="https://www.catastrochubut.gov.ar/" target="_blank">Catastro Chubut</a></li>
+                </ul>
+            </aside>
+        </div>
     </div>
     <footer>
         <hr>
