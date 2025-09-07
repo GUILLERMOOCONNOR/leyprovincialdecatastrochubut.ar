@@ -235,11 +235,19 @@ footer hr {
         flex-direction: column;
         gap: 14px;
     }
-    /* Mejorar márgenes laterales en móviles */
+    /* Mejorar márgenes y evitar corte en móviles */
     .main-content, .sidebar {
         box-sizing: border-box;
-        padding-left: 16px;
-        padding-right: 16px;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
