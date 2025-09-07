@@ -235,4 +235,13 @@ footer hr {
         flex-direction: column;
         gap: 14px;
     }
+    /* Mejorar márgenes laterales en móviles */
+    .main-content, .sidebar {
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
+
+/* --- META TAG --- */
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
